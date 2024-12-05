@@ -1,0 +1,55 @@
+total 300
+ 994517 drwxr-x--- 26 kolodko_av kolodko_av  4096 Dec  5 16:26 .
+ 917505 drwxr-xr-x  4 root       root        4096 Nov 27 17:42 ..
+ 917678 -rw-------  1 kolodko_av kolodko_av  1224 Oct 12 11:16 .bash_history
+ 994530 -rw-r--r--  1 kolodko_av kolodko_av   220 Oct  5 08:57 .bash_logout
+ 994538 -rw-r--r--  1 kolodko_av kolodko_av  3771 Oct  5 08:57 .bashrc
+1463814 drwxrwxr-x 15 kolodko_av kolodko_av  4096 Dec  5 16:34 .cache
+ 994795 drwxrwxr-x  2 kolodko_av kolodko_av  4096 Nov 27 17:04 cd
+ 994655 -rw-rw-r--  1 kolodko_av kolodko_av   826 Nov  6 17:51 command.md
+ 994532 drwxr-xr-x 17 kolodko_av kolodko_av  4096 Oct 17 17:52 .config
+ 921394 -rw-rw-r--  1 kolodko_av kolodko_av    54 Oct 12 11:24 .curlrc
+1463815 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Desktop
+ 917672 -rw-r--r--  1 kolodko_av kolodko_av    23 Oct 17 16:42 .dmrc
+1463819 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Documents
+1463816 drwxr-xr-x  3 kolodko_av kolodko_av  4096 Dec  5 16:31 Downloads
+ 917688 -rwxrwxr--  1 kolodko_av kolodko_av    72 Oct 17 16:37 .fehbg
+ 917696 drwxrwxr-x  2 kolodko_av kolodko_av  4096 Oct 12 10:48 .fonts
+ 917694 -rw-rw-r--  1 kolodko_av kolodko_av   255 Oct 12 10:43 .gitconfig
+1463835 drwx------  3 kolodko_av kolodko_av  4096 Oct  5 09:02 .gnupg
+ 994539 -rw-r--r--  1 kolodko_av kolodko_av    22 Oct  5 08:57 .gtkrc-2.0
+ 994531 -rw-r--r--  1 kolodko_av kolodko_av   516 Oct  5 08:57 .gtkrc-xfce
+ 917675 -rw-------  1 kolodko_av kolodko_av     0 Oct  5 09:02 .ICEauthority
+ 917697 drwxrwxr-x  5 kolodko_av kolodko_av  4096 Nov 27 17:26 LAB
+ 917691 drwxrwxrwx  3 kolodko_av kolodko_av  4096 Oct 12 10:24 .linuxmint
+ 994518 drwxr-xr-x  4 kolodko_av kolodko_av  4096 Oct  5 09:02 .local
+1463957 drwx------  4 kolodko_av kolodko_av  4096 Oct  5 09:21 .mozilla
+1463820 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Music
+ 994769 drwxrwxr-x  3 kolodko_av kolodko_av  4096 Nov 27 17:09 otchet
+ 994809 -rw-rw-r--  1 kolodko_av kolodko_av  2550 Nov 27 17:47 otchet.md
+ 941554 -rw-rw-r--  1 kolodko_av kolodko_av 89355 Oct 12 11:14 .p10k.zsh
+1463821 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct 14 18:58 Pictures
+ 994768 drwx------  3 kolodko_av kolodko_av  4096 Nov  6 16:41 .pki
+ 921872 drwxrwxr-x  6 kolodko_av kolodko_av  4096 Oct 12 11:09 powerlevel10k
+ 994537 -rw-r--r--  1 kolodko_av kolodko_av   807 Oct  5 08:57 .profile
+1463818 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Public
+1468297 drwxrwxr-x  8 kolodko_av kolodko_av  4096 Nov  6 17:14 structure
+ 917677 -rw-r--r--  1 kolodko_av kolodko_av     0 Oct  5 09:17 .sudo_as_admin_successful
+1463817 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Templates
+ 917680 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-clipboard-tty7-control.pid
+ 917676 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-clipboard-tty7-service.pid
+ 917685 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-draganddrop-tty7-control.pid
+ 917681 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-draganddrop-tty7-service.pid
+ 917682 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-hostversion-tty7-control.pid
+ 917683 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-seamless-tty7-control.pid
+ 917684 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-seamless-tty7-service.pid
+ 917687 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-vmsvga-session-tty7-control.pid
+ 917686 -rw-r-----  1 kolodko_av kolodko_av     5 Dec  5 16:26 .vboxclient-vmsvga-session-tty7-service.pid
+1463822 drwxr-xr-x  2 kolodko_av kolodko_av  4096 Oct  5 09:02 Videos
+ 994656 drwxrwxr-x  4 kolodko_av kolodko_av  4096 Oct 17 16:47 .vscode
+ 917671 -rw-------  1 kolodko_av kolodko_av    55 Dec  5 16:26 .Xauthority
+ 917670 -rw-------  1 kolodko_av kolodko_av  6246 Dec  5 16:38 .xsession-errors
+ 917669 -rw-------  1 kolodko_av kolodko_av  7349 Nov 27 17:36 .xsession-errors.old
+1466279 drwxrwxr-x  3 kolodko_av kolodko_av  4096 Oct 14 18:14 .zsh
+ 941561 -rw-rw-r--  1 kolodko_av kolodko_av   848 Oct 14 19:01 .zshrc
+ 941596 drwxrwxr-x  8 kolodko_av kolodko_av  4096 Oct 12 11:26 zsh-syntax-highlighting

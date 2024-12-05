@@ -1,0 +1,12 @@
+/home/kolodko_av/Templates
+/home/kolodko_av/Desktop
+/home/kolodko_av/Music
+/home/kolodko_av/.vscode/cli
+/home/kolodko_av/Public
+/home/kolodko_av/Documents
+/home/kolodko_av/Videos
+/home/kolodko_av/.mozilla/extensions
+/home/kolodko_av/.config/goa-1.0
+/home/kolodko_av/cd
+/home/kolodko_av/.cache/obexd
+/home/kolodko_av/.gnupg/private-keys-v1.d
