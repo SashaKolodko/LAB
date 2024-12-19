@@ -1,0 +1,224 @@
+1 блок
+1 часть
+ import pickle
+
+def input_user_data():
+    surname = input("vvedite familiu: ")
+    passwords = {}
+    
+    for _ in range(6):
+        s = input("vvedite nazvanie caita: ")
+        password = input("vvedite parol: ")
+        passwords[s] = password
+    
+    return surname, passwords
+
+users = {}
+for _ in range(7):
+    surname, passwords = input_user_data()
+    users[surname] = passwords
+
+for user, passwords in users.items():
+    avg_length = sum(len(p) for p in passwords.values()) / len(passwords)
+    min_password_site = min(passwords, key=lambda x: len(passwords[x]))
+    print(f"polzovatel: {user}, dlina paroley: {avg_length:.2f}, minimalnuy parol: {min_password_site}")
+
+for user, passwords in users.items():
+    seen_passwords = {}
+    new_passwords = {}
+    
+    for s, password in passwords.items():
+        if password in seen_passwords:
+            new_passwords[s] = password + "_new" 
+        else:
+            new_passwords[s] = password
+            seen_passwords[password] = True
+    
+    users[user] = new_passwords
+
+facebook_users = {user: passwords for user, passwords in users.items() if passwords.get('Facebook', '').startswith('F')}
+print("y gotorogo zaglavnay bykva:")
+for user in facebook_users:
+    print(user)
+
+with open('data.pickle', 'wb') as f:
+    pickle.dump(users, f)
+
+with open('data.pickle', 'rb') as f:
+    loaded_users = pickle.load(f)
+
+print("dannue iz binarnogo fales:")
+print(loaded_users)
+2 часть
+import string
+
+def count_punctuation(line):
+    return sum(1 for char in line if char in string.punctuation)
+
+with open('input.txt', 'r', encoding='utf-8') as infile, open('output.txt', 'w', encoding='utf-8') as outfile:
+    for line in infile:
+        punctuation_count = count_punctuation(line)
+        outfile.write(f"{punctuation_count}\n")
+2 блок
+1 часть 
+import csv
+
+def read_csv(file_path):
+    data = []
+    with open(file_path, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+    return data
+
+def print_data(data):
+    for row in data:
+        for key, value in row.items():
+            print(f"{key} → {value}")
+        print() 
+
+def min_value(data, column):
+    return min(float(row[column]) for row in data)
+
+def max_value(data, column):
+    return max(float(row[column]) for row in data)
+
+def sum_values(data, column):
+    return sum(float(row[column]) for row in data)
+
+def count_values(data, column):
+    return len(data)
+
+def average_value(data, column):
+    return sum_values(data, column) / count_values(data)
+
+file_path = '11.csv'
+data = read_csv(file_path)
+
+print_data(data)
+
+column_name = 'vozrast'  
+print(f"min znathenie v stolbthe '{column_name}': {min_value(data, column_name)}")
+print(f"max znathenie v stolbthe'{column_name}': {max_value(data, column_name)}")
+print(f"symma znathenie v stolbthe'{column_name}': {sum_values(data, column_name)}")
+print(f"kolithestvo znathenie v stolbthe'{column_name}': {count_values(data, column_name)}")
+print(f"srednee znathenie v stolbthe'{column_name}': {average_value(data, column_name)}")
+2 часть
+import json
+
+def read_json_file(file_path):
+    """zitaet i vozrathaet."""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
+
+def filter_users_by_language(data, language):
+    """filtruet"""
+    filtered_users = [user for user in data if user.get('language') == language]
+    return filtered_users
+
+def write_json_file(file_path, data):
+    """zapisuvaet."""
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, ensure_ascii=False, indent=4)
+
+def main():
+    
+    input_file = 'lab.json'
+
+    output_file = 'out.json'
+    
+    language_to_filter = 'Python' 
+
+    data = read_json_file(input_file)
+
+    filtered_users = filter_users_by_language(data, language_to_filter)
+
+    write_json_file(output_file, filtered_users)
+
+if __name__ == '__main__':
+    main()
+3 часть
+import os
+
+def list_directory(path):
+    """vuvod sodirgimogo direktorii."""
+    try:
+        items = os.listdir(path)
+        print(f"soderzimoe direktorii '{path}':")
+        for item in items:
+            print(item)
+    except FileNotFoundError:
+        print(f"false: deriktoria '{path}' ne naidena.")
+    except PermissionError:
+        print(f"false net dostypa '{path}'.")
+
+def create_file_or_directory(path, name, is_directory=False):
+    """sozdaet fail ili deriktoriu."""
+    full_path = os.path.join(path, name)
+    try:
+        if is_directory:
+            os.makedirs(full_path)
+            print(f"direktoria '{full_path}' sozdana.")
+        else:
+            with open(full_path, 'w') as f:
+                f.write('')  
+            print(f"fail '{full_path}' sozdan.")
+    except FileExistsError:
+        print(f"false: '{full_path}'sythestvyet.")
+    except Exception as e:
+        print(f"false: {e}")
+
+def delete_file_or_directory(path):
+    """ydalaem."""
+    try:
+        if os.path.isdir(path):
+            os.rmdir(path)  
+            print(f"directoria '{path}' ydalena.")
+        else:
+            os.remove(path)  
+            print(f"fail '{path}' ydalen.")
+    except FileNotFoundError:
+        print(f"false: '{path}' ne naiden.")
+    except OSError:
+        print(f"false: '{path}' ne pystay derictoria.")
+    except Exception as e:
+        print(f"false : {e}")
+
+def main():
+    while True:
+        print("\nmenedjer")
+        print("1. raskrut direktoriy")
+        print("2. sozdat fail")
+        print("3. sozdat direktoriy")
+        print("4. ydalit fail")
+        print("5. ydalit direktoriy")
+        print("6. vuxod")
+        
+        choice = input("(1-6): ")
+        
+        if choice == '1':
+            path = input("pyt v direktoriy: ")
+            list_directory(path)
+        elif choice == '2':
+            path = input("pyt v direktoriy dla sosdania fail: ")
+            name = input("ima direktorii: ")
+            create_file_or_directory(path, name, is_directory=False)
+        elif choice == '3':
+            path = input("pyt dla sozdania direktorii: ")
+            name = input("ima directorii: ")
+            create_file_or_directory(path, name, is_directory=True)
+        elif choice == '4':
+            path = input("pyt v fail: ")
+            delete_file_or_directory(path)
+        elif choice == '5':
+            path = input("pyt v direktoriu: ")
+            delete_file_or_directory(path)
+        elif choice == '6':
+            print("vuxod")
+            break
+        else:
+            print("false.")
+
+if __name__ == "__main__":
+    main()
